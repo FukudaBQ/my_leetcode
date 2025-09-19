@@ -1,7 +1,7 @@
 package main
 
 import (
-	"by_golang/leetcode19"
+	"by_golang/listnode/leetcode19"
 	"fmt"
 )
 

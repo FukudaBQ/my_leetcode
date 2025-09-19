@@ -1,35 +1,12 @@
 package leetcode21
 
-import "fmt"
+import (
+	"by_golang/listnode"
+	"fmt"
+)
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func printList(head *ListNode) {
-	for head != nil {
-		fmt.Printf("%d ", head.Val)
-		head = head.Next
-	}
-	fmt.Println()
-}
-
-func buildList(nums []int) *ListNode {
-	if len(nums) == 0 {
-		return nil
-	}
-	head := &ListNode{Val: nums[0]}
-	current := head
-	for _, v := range nums[1:] {
-		current.Next = &ListNode{Val: v}
-		current = current.Next
-	}
-	return head
-}
-
-func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	pre := &ListNode{0, nil}
+func mergeTwoLists(list1 *listnode.ListNode, list2 *listnode.ListNode) *listnode.ListNode {
+	pre := &listnode.ListNode{0, nil}
 	head := pre
 	ptr1 := list1
 	ptr2 := list2
@@ -58,6 +35,6 @@ func Leetcode() {
 	s := "gopher"
 	fmt.Printf("Hello and welcome, %s!\n", s)
 
-	a := mergeTwoLists(buildList([]int{1, 2, 4}), buildList([]int{1, 3, 4}))
-	printList(a)
+	a := mergeTwoLists(listnode.BuildList([]int{1, 2, 4}), listnode.BuildList([]int{1, 3, 4}))
+	listnode.PrintList(a)
 }
