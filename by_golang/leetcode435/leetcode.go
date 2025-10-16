@@ -18,7 +18,7 @@ func eraseOverlapIntervals(intervals [][]int) int {
 			end = intervals[i][1]
 		}
 	}
-	return remove
+	return remove - 1
 }
 
 func Leetcode() {
