@@ -31,7 +31,6 @@ func minWindow(s string, t string) string {
 			if curLen := pt1 - pt0; curLen < minL {
 				minL, minpt0, minpt1 = curLen, pt0, pt1
 			}
-			// 左指针收缩
 			ch := sr[pt0]
 			if lack, ok := trMap[ch]; ok {
 				if lack == 0 {
